@@ -1,0 +1,12 @@
+div.container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+}

@@ -3,7 +3,7 @@ body, html {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    background-image: url(./assets/background.png);
+    background-image: url(./assets/background2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,9 +14,60 @@ body, html {
 }
 
 div.conteudo {
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px
+    gap: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #CF9180;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    background-color: #778A35;
+    border-radius: 4px;
+    border: solid 1px #505D23;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.04);
+    transition: 150ms linear; 
+    border: solid 2px #505D23;
+}
+
+@media screen and (max-width: 390px) {
+    div.conteudo {
+        width: 290px;
+        gap: 50px;
+    }
+    
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        color: #CF9180;
+        font-size: larger;
+        font-weight: 600;
+    }
+    
+    button {
+        width: 150px;
+        height: 32px;
+        background-color: #778A35;
+        border-radius: 4px;
+        border: 0px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: medium;
+        color: white;
+    }
 }
