@@ -30,6 +30,12 @@ body#body {
     border: solid 2px #778A35;
 }
 
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: end;
+}
+
 .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
     display: flex;
     flex-wrap: inherit;
@@ -121,10 +127,32 @@ h2.title {
     color: #778A35;
 }
 
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        display: flex!important;
-        flex-basis: auto;
-        justify-content: end;
+@media screen and (max-width: 930px) {
+    div.conteudo {
+        margin-left: 10%;
+        margin-right: 10%;
     }
+    h2.title {
+        font-size: 70px;
     }
+}
+
+@media screen and (max-width: 710px) {
+    h2.title {
+        font-size: 60px;
+    }
+    div.conteudo {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    h2.title {
+        font-size: 55px;
+    }
+    div.conteudo {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
