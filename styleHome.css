@@ -1,6 +1,7 @@
 body, html {
     width: 100%;
     height: 100%;
+    background-color: #FAF8F4;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -27,12 +28,12 @@ body#body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: solid 2px #778A35;
+    border-bottom: solid 2px #778A35;
 }
 
 .navbar-expand-lg .navbar-collapse {
-    display: flex!important;
-    flex-basis: auto;
+   /* display: flex!important;
+    flex-basis: auto;*/
     justify-content: end;
 }
 
@@ -64,6 +65,13 @@ button.dropdown-toggle {
     font-family: 'Montserrat', sans-serif;
     font-size: medium;
     color: #6D715A;
+}
+
+button.dropdown-toggle:hover {
+    transform: scale(1.04);
+    transition: 150ms linear; 
+    text-decoration: underline;
+    color: #CF9180;
 }
 
 a.dropdown-item {
@@ -108,8 +116,8 @@ div.conteudo {
     flex-direction: column;
     row-gap: 30px;
     margin: 5%;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 h1.title {
@@ -123,8 +131,60 @@ h2.title {
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-size: 80px;
+    font-size: 60px;
     color: #778A35;
+}
+
+hr:not([size]) {
+    height: 4px;
+}
+
+hr.hr {
+    width: 100%;
+    height: 3px;
+    background-color: #CF9180;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+p.texto {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    color: black;
+}
+
+div.cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.card {
+    background-color: #FAF8F4;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    width: 220px;
+    height: 280px;
+}
+
+div.cardConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+p.cardTxt {
+    text-align: center;
+}
+
+img.objetivos {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
 }
 
 @media screen and (max-width: 930px) {
@@ -133,13 +193,13 @@ h2.title {
         margin-right: 10%;
     }
     h2.title {
-        font-size: 70px;
+        font-size: 55px;
     }
 }
 
 @media screen and (max-width: 710px) {
     h2.title {
-        font-size: 60px;
+        font-size: 45px;
     }
     div.conteudo {
         margin-left: 5%;
@@ -149,10 +209,13 @@ h2.title {
 
 @media screen and (max-width: 530px) {
     h2.title {
-        font-size: 55px;
+        font-size: 40px;
     }
     div.conteudo {
-        margin-left: 2%;
-        margin-right: 2%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    p.texto {
+        font-size: 18px;
     }
 }
