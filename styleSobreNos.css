@@ -6,6 +6,7 @@ body, html {
 }
 
 body {
+    height: auto;
     margin: 0;
     font-family: var(--bs-font-sans-serif);
     font-size: 1rem;
@@ -21,7 +22,7 @@ body#body {
     background-color: #FAF8F4;    
 }
 
-/* DESIGN NAVBAR*/
+/*NAVBAR*/
 
 .navbar {
     background-image: url(./assets/backgroundSimple.png);
@@ -109,7 +110,6 @@ a.dropdown-item:hover {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-/*CORPO*/
 
 div.conteudo {
     display: flex;
@@ -118,6 +118,8 @@ div.conteudo {
     margin: 5%;
     margin-left: 20%;
     margin-right: 20%;
+    justify-content: center;
+    align-items: center;
 }
 
 h2.title {
@@ -129,68 +131,86 @@ h2.title {
     text-shadow: 0.1em 0.1em 0.1em #AED091;
 }
 
-h2.titlePink {
-    font-weight: 300;
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    font-size: 50px;
-    color: #CF9180;
-    text-shadow: 0.1em 0.1em 0.1em #DDA494;
-}
-
-hr:not([size]) {
-    height: 4px;
-}
-
-hr.hr {
-    width: 100%;
-    height: 3px;
-    background-color: #CF9180;
-    margin-top: 5px;
-    margin-bottom: 5px;
+img.img-principal {
+    border: solid 2px #CF9180;
+    border-radius: 5px;
+    width: 80%;
 }
 
 p.texto {
     font-family: 'Montserrat', sans-serif;
-    text-align: justify;
+    text-align: center;
     font-size: 20px;
     color: black;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /*CARDS*/
 
 div.cards {
-    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+a.card-clicavel {
+    text-decoration: none;
 }
 
 div.card {
-    background-color: #FAF8F4;
-    border-radius: 10px;
-    border: solid 2px transparent;
-    width: 220px;
-    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 8px;
+    border: solid 2px #778A35;
 }
 
-div.cardConteudo {
+div.card:hover {
+    border: solid 2px #CF9180;
+    transform: scale(1.05);
+    transition: 250ms linear; 
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+img.integrante {
+    width: 30%;
+    border-radius: 50%;
+    border: solid 2px #778A35;
+    margin: 15px;
+}
+
+div.infos {
+    width: 70%;
+    text-align: center;
+    margin: 15px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
 }
 
-p.cardTxt {
-    text-align: center;
-    font-size: large;
+h3.sobre {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: #CF9180;
 }
 
-img.objetivos {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+p.sobre {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h4.instagram {
+    color: #CF9180;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 /*FOOTER*/
@@ -264,10 +284,6 @@ p.copyR {
     h2.titlePink {
         font-size: 55px;
     }
-    div.cards {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
     div.copyR {
         flex-wrap: wrap;
     }
@@ -300,4 +316,65 @@ p.copyR {
     p.texto {
         font-size: 18px;
     }
+}
+
+
+ /*FOOTER*/
+
+ div.png-footer {
+    width: 100%;
+}
+
+img.footer {
+    width: 100%;
+}
+
+div.footer {
+    width: 100%;
+    background: linear-gradient(#AED091, #D1E2C4);
+}
+
+div.info-footer {
+    width: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 2%;
+    border-top: solid 1px #6D715A;
+}
+
+h1.frase-footer {
+    color: #6D715A;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 2%;
+}
+
+a.link-delfruit {
+    color: #CF9180;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a.link-delfruit:hover {
+    color: #6D715A;
+}
+
+div.copyR {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+p.txt-footer {
+    color: #6D715A;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+p.copyR {
+    text-align: right;
+    padding-bottom: 1%;
+    padding-right: 2%;
 }

@@ -6,6 +6,7 @@ body, html {
 }
 
 body {
+    height: 100%;
     margin: 0;
     font-family: var(--bs-font-sans-serif);
     font-size: 1rem;
@@ -107,4 +108,339 @@ a.dropdown-item:hover {
     font-size: 1rem;
     border-radius: 0.25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/*CONTEÚDO*/
+
+div.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2#txt1.title {
+    margin-top: 4%;
+    font-size: 55px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+span#txt1.h2-title {
+    font-size: 55px;
+}
+
+h2.title {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #778A35;
+    text-shadow: 0.1em 0.1em 0.1em #AED091;
+    margin: 0px;
+}
+
+span.h2-title {
+    font-weight: 300;
+    text-align: center;
+    font-size: 50px;
+    color: #CF9180;
+    text-shadow: 0.1em 0.1em 0.1em #DDA494;
+}
+
+img.img-principal {
+    border: solid 2px #CF9180;
+    border-radius: 5px;
+}
+
+p.texto {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    color: black;
+}
+
+/*CARDS NOSSAS RECEITAS*/
+
+div.cards-receitasD {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.card-receitasD {
+    width: 289px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border: solid 2px #CF9180;
+    border-radius: 5px;
+}
+
+div.card-receitasD:hover {
+    border: dashed 2px #CF9180;
+    transform: scale(1.05);
+    transition: 250ms linear; 
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+img.img-receitasD {
+    width: 285px;
+    border-radius: 5px;
+    border-bottom: solid 2px #CF9180;
+}
+
+p.txt-receitasD {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: #778A35;
+    font-weight: 500;
+}
+
+a.link-receitasD {
+    text-decoration: none;
+}
+
+h2.title-receitas {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #CF9180;
+    text-shadow: 0.1em 0.1em 0.1em #DDA494;
+    margin: 0px;
+}
+
+span.title-receitas{
+    font-weight: 300;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: #778A35;
+    text-shadow: 0.1em 0.1em 0.1em #AED091;
+    margin: 0px;
+}
+
+/*EXPLICAÇÃO RECEITAS*/
+
+h3.title-receitas {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: #CF9180;
+    margin: 0px;
+}
+
+img.img-receita {
+    border: solid 2px #778A35;
+    border-radius: 5px;
+}
+
+div.ingredientes-pai {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 2px #778A35;
+    border-bottom: solid 2px #778A35;
+    margin-top: 3%;
+}
+
+div.ingredientes-filho {
+    width: 50%;
+}
+
+li {
+    width: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
+
+p.li {
+    width: auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
+
+div.modoPrep-pai {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px #778A35;
+    column-gap: 20px;
+}
+
+ul.instrucao {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+img.icon-instrucao {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.linha-vertical {
+    height: 190px;/*Altura da linha*/
+    border-left: solid 2px #778A35;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+  }
+
+/*FOOTER*/
+
+div.png-footer {
+    width: 100%;
+}
+
+img.footer {
+    width: 100%;
+}
+
+div.footer {
+    width: 100%;
+    background: linear-gradient(#AED091, #D1E2C4);
+}
+
+div.info-footer {
+    width: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 2%;
+    border-top: solid 1px #6D715A;
+}
+
+h1.frase-footer {
+    color: #6D715A;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 2%;
+}
+
+a.link-delfruit {
+    color: #CF9180;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a.link-delfruit:hover {
+    color: #6D715A;
+}
+
+div.copyR {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+p.txt-footer {
+    color: #6D715A;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+p.copyR {
+    text-align: right;
+    padding-bottom: 1%;
+    padding-right: 2%;
+}
+
+@media screen and (max-width: 1300px) {
+    div.cards-receitasD {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    div.conteudo {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    h2.title {
+        font-size: 55px;
+    }
+    h2.titlePink {
+        font-size: 55px;
+    }
+    span.h2-title {
+        font-size: 55px;
+    }
+    div.modoPrep-pai {
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 10px;
+    }
+    .linha-vertical {
+        border-left: solid 2px transparent;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    }
+      ul.instrucao {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    div.conteudo {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    h2#txt1.title {
+        font-size: 45px;
+    }
+    
+    span#txt1.h2-title {
+        font-size: 45px;
+    }
+    h2.title {
+        font-size: 45px;
+    }
+    h2.titlePink {
+        font-size: 45px;
+    }
+    span.h2-title {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    div.conteudo {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    h2#txt1.title {
+        font-size: 40px;
+    }
+    
+    span#txt1.h2-title {
+        font-size: 40px;
+    }
+    h2.title {
+        font-size: 40px;
+    }
+    h2.titlePink {
+        font-size: 40px;
+    }
+    span.h2-title {
+        font-size: 40px;
+    }
+    p.texto {
+        font-size: 18px;
+    }
 }
