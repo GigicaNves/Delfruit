@@ -131,6 +131,15 @@ h2.title {
     text-shadow: 0.1em 0.1em 0.1em #AED091;
 }
 
+h2.titlePink {
+    font-weight: 300;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: #CF9180;
+    text-shadow: 0.1em 0.1em 0.1em #DDA494;
+}
+
 img.img-principal {
     border: solid 2px #CF9180;
     border-radius: 5px;
@@ -211,6 +220,96 @@ h4.instagram {
     color: #CF9180;
     font-weight: 400;
     font-size: 20px;
+}
+
+/*FORMULÁRIO*/
+
+div.faleConosco {
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px #6D715A;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+p.faleBemVindo {
+    width: 27%;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black;
+    margin: 0px;
+}
+
+form.form {
+    width: 67%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+div.nomeCompleto {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 8px;
+}
+
+div.nome {
+    width: 100%;
+}
+
+p.form {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input#mensagem {
+    height: 100px;
+}
+
+button.enviar-form {
+    width: 20%;
+    height: 40px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    border: solid 1px #CF9180;
+    background-color: white;
+    box-shadow: 0 7px 7px -3px #DDA494;
+}
+
+button.enviar-form:hover {
+    border: solid 1px #778A35;
+    transform: scale(1.0);
+    transition: 250ms linear; 
+    box-shadow: 0 20px 25px -5px #AED091;
 }
 
 /*FOOTER*/
@@ -320,65 +419,4 @@ p.copyR {
     p.texto {
         font-size: 18px;
     }
-}
-
-
- /*FOOTER*/
-
- div.png-footer {
-    width: 100%;
-}
-
-img.footer {
-    width: 100%;
-}
-
-div.footer {
-    width: 100%;
-    background: linear-gradient(#AED091, #D1E2C4);
-}
-
-div.info-footer {
-    width: auto;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: 2%;
-    border-top: solid 1px #6D715A;
-}
-
-h1.frase-footer {
-    color: #6D715A;
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    padding-left: 2%;
-}
-
-a.link-delfruit {
-    color: #CF9180;
-    font-family: 'Montserrat', sans-serif;
-}
-
-a.link-delfruit:hover {
-    color: #6D715A;
-}
-
-div.copyR {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-p.txt-footer {
-    color: #6D715A;
-    font-size: large;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-}
-
-p.copyR {
-    text-align: right;
-    padding-bottom: 1%;
-    padding-right: 2%;
 }
