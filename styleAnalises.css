@@ -169,3 +169,135 @@ p.copyR {
     padding-bottom: 1%;
     padding-right: 2%;
 }
+
+/*:root {
+    --cor-primaria: #F8F7F6;
+}*/
+
+html {
+    background-color: var(--cor-primaria);
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-align: justify;
+    background-color: var(--cor-primaria);
+}
+
+.body2 {
+    background-color: var(--cor-primaria);
+    margin-left: 15%;
+    margin-right: 15%;
+    border-color: black;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+p {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #778A35;
+    text-shadow: 0.1em 0.1em 0.1em #AED091;
+}
+
+h2 {
+    font-weight: 300;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 50px;
+    color: #CA6680;
+    text-shadow: 0.1em 0.1em 0.1em #DDA494;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#ca {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #778A35;
+    text-shadow: 0.1em 0.1em 0.1em #AED091;
+    font-size: 50px;
+}
+
+.A1 {
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+}
+
+#primeiro {
+    height: 100%;
+    text-align: justify;
+    width: 100%;
+}
+
+#segundo {
+    width: 50%;
+    height: 50%;
+    margin-left: 10%;
+}
+
+.grafico {
+    width: 50%;
+    height: 50%;
+    align-items: center;
+}
+
+#grafico2 {
+    margin: 5% 50% 0 50%;
+}
+
+#h2f {
+    text-align: justify;
+}
+
+canvas {
+    max-width: 100%;
+    /* Faz o canvas se ajustar ao tamanho do contêiner */
+}
+
+hr {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+div.referencias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+@media screen and (max-width: 930px) {
+    .A1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    h1#ca {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    
+}

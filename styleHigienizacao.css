@@ -169,3 +169,204 @@ p.copyR {
     padding-bottom: 1%;
     padding-right: 2%;
 }
+
+div.conteudo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.A1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 30px;
+}
+
+#primeiro {
+    width: 610px;
+    height: 50%;
+    text-align: justify;
+    color: #000;
+    font-family: Play;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 5%;
+}
+
+#segundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+img.f {
+    width: 100%;
+}
+
+li {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+p.nutri {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+p {
+    font-family:'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #778A35;
+    text-align: justify;
+    text-align: center;
+}
+
+p:hover {
+    color: black;
+}
+
+h1 {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #778A35;
+    text-shadow: 0.1em 0.1em 0.1em #AED091;
+}
+
+h2 {
+    font-weight: 300;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 55px;
+    color: #CA6680;
+    text-shadow: 0.1em 0.1em 0.1em #DDA494;
+    margin-top: 5%;
+}
+
+video {
+    width: 1000px;
+    height: 800px;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.principios {
+    width: 100%;
+    padding: 40px;
+    border: 2px solid #7ED17B;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    transition: .2s;
+    align-items: center;
+}
+
+.principios:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px#2BD625;
+}
+
+#ca {
+    margin-top: 1%;
+    color: #778A35;
+    text-shadow: 0.1em 0.1em 0.1em #AED091;
+    font-size: 50px;
+}
+
+#container {
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.5);
+}
+.step-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border-color: #000;
+}
+
+.step-card:hover {
+    transform: scale(1.05);
+}
+
+.step-content {
+    padding: 20px;
+}
+
+.step-number {
+    font-size: 1.5em;
+    color: #CA6680;
+    margin-bottom: 10px;
+}
+
+.step-description {
+    color: #666;
+}
+
+@media screen and (max-width: 1200px) {
+    .h1 {
+        font-size: 50px;
+    }
+    .A1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    div.conteudo {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    div.conteudo {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    div.conteudo {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+}

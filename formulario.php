@@ -16,6 +16,10 @@ try {
 
     $stmt->execute();
 
+    header("Location: mensagem.html?success=true");
+    exit();
+    echo '<script>alert("Mensagem enviada com sucesso!");</script>';
+    
 } catch (PDOException $e) {
     echo "Erro no catch: " . $e->getMessage();
 }

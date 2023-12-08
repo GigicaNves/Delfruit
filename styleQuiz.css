@@ -219,6 +219,14 @@ div.conteudo {
     background-color: #CF9180;
   }
 
+  p#respostaCerta {
+    margin-top: 3%;
+    font-family:'Montserrat', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: justify;
+  }
+
   /*FOOTER*/
 
 div.png-footer {

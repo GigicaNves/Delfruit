@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="./assets/titleImg.png" />
         <title>Análises</title>
-        <link rel="stylesheet" href="styleSobreNos.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="styleAnalises.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +25,25 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    
+        <!--link do java para gráfico-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+        <!--fonte do H1-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@500&family=Raleway:wght@300&family=Roboto:ital,wght@1,300&display=swap"
+            rel="stylesheet">
+    
+        <!--fonte dos textos-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@500&family=Raleway:wght@300&family=Roboto:ital,wght@1,300&display=swap"
+            rel="stylesheet">
     </head>
 
     <body>
@@ -56,6 +76,817 @@
                 </div>
               </nav>
         </header>
+
+        <div class="body2">
+
+          <h1 id="ca"> ANÁLISE DA DADOS DAS PESQUISAS </h1>
+  
+          <p>
+              Com a finalidade de coletar dados para a elaboração do projeto, montamos um formulário contendo nove
+              perguntas objetivas sobre as cascas de frutas. Assim teríamos margem do conhecimento do nosso público-alvo
+              sobre o tema abordado.
+          </p>
+  
+          <div class="A1">
+  
+              <div id="primeiro">
+  
+                  <h2 id="h2f"> Predominância de idade dos participantes da pesquisa </h2>
+  
+                  <p>
+                      Das 62 pessoas entrevistadas, cerca de 87,3% tinham idades entre 14 e 17 anos. O que comprova que
+                      nosso foms circulou na maior parte, pelos estudantes da nossa ETEC, ou pessoas que estão no mesmo
+                      nível de escolaridade.
+                  </p>
+              </div>
+  
+              <div style="width: 100%; max-width: 600px; margin: auto; display: flex; align-items: center; justify-content: center;">
+                  <canvas id="myChart1"></canvas>
+              </div>
+              <script>
+                  function criarGrafico() {
+                      const dados = {
+                          labels: ['14 - 17', '18 - 21', 'Mais de 35'],
+                          datasets: [{
+                              label: 'Idades',
+                              backgroundColor: ['#C9DFB7', '#AED091', '#697560'],
+                              borderColor: ['black'],
+                              borderWidth: 1,
+                              data: [87.3, 9.5, 3.2],
+                          }]
+                      };
+  
+                      const config = {
+                          type: 'doughnut',
+                          data: dados,
+                          options: {
+                              plugins: {
+                                  legend: {
+                                      position: 'bottom', // Posição da legenda
+                                  }
+                              }
+                          }
+                      };
+  
+                      const ctx = document.getElementById('myChart1').getContext('2d');
+                      const myChart = new Chart(ctx, config);
+                  }
+  
+                  // Chamando a função para criar o gráfico
+                  criarGrafico();
+  
+                  // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+                  window.addEventListener('resize', function () {
+                      criarGrafico();
+                  });
+              </script>
+          </div>
+  
+          <h2> Você já utilizou/utiliza cascas de alimentos em suas receitas? </h2>
+  
+          <div style="width: 100%; max-width: 600px; margin: auto;">
+              <canvas id="myChart2"></canvas>
+          </div>
+          <script>
+              function criarGrafico() {
+                  const dados = {
+                      labels: ['Sim, ocasionalmente', 'Não, nunca'],
+                      datasets: [{
+                          backgroundColor: ['#C9DFB7', '#AED091'],
+                          borderColor: ['black'],
+                          borderWidth: 1,
+                          data: [49.2, 50.8],
+                      }]
+                  };
+  
+                  const config = {
+                      type: 'doughnut',
+                      data: dados,
+                      options: {
+                          plugins: {
+                              legend: {
+                                  position: 'bottom', // Posição da legenda
+                              }
+                          }
+                      }
+                  };
+  
+                  const ctx = document.getElementById('myChart2').getContext('2d');
+                  const myChart = new Chart(ctx, config);
+              }
+  
+              // Chamando a função para criar o gráfico
+              criarGrafico();
+  
+              // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+              window.addEventListener('resize', function () {
+                  criarGrafico();
+              });
+          </script>
+  
+          <p>
+              50,8% dos entrevistados afirmam que nunca utilizaram casca de alimentos em suas refeições, um dado chocante
+              ao levar em conta que muitos alimentos do dia a dia possuem uma grande porcentagem de seu peso, em cascas.
+          </p>
+  
+          <h2> Qual é a sua opinião sobre o sabor das cascas de alimentos em pratos culinários? </h2>
+  
+          <div style="width: 100%; max-width: 600px; margin: auto;">
+              <canvas id="myChart3"></canvas>
+          </div>
+          <script>
+              function criarGrafico() {
+                  const dados = {
+                      labels: ['Sabor desagradável', 'Não faz diferença no sabor', 'Contribui positivamente para o sabor'],
+                      datasets: [{
+                          backgroundColor: ['#C9DFB7', '#AED091', '#697560'],
+                          borderColor: ['black'],
+                          borderWidth: 1,
+                          data: [28.6, 23.8, 47.6],
+                      }]
+                  };
+  
+                  const config = {
+                      type: 'doughnut',
+                      data: dados,
+                      options: {
+                          plugins: {
+                              legend: {
+                                  position: 'bottom', // Posição da legenda
+                              }
+                          }
+                      }
+                  };
+  
+                  const ctx = document.getElementById('myChart3').getContext('2d');
+                  const myChart = new Chart(ctx, config);
+              }
+  
+              // Chamando a função para criar o gráfico
+              criarGrafico();
+  
+              // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+              window.addEventListener('resize', function () {
+                  criarGrafico();
+              });
+          </script>
+  
+          <p>
+              Por mais inesperado que seja, em média 48% dos entrevistados afirmaram que as cascas de alimentos em
+              refeições podem contribuir positivamente para o sabor.
+          </p>
+  
+          <h2> Você acredita que o uso de cascas de alimentos pode contribuir para a redução do desperdício alimentar?
+          </h2>
+  
+          <div style="width: 100%; max-width: 600px; margin: auto;">
+              <canvas id="myChart4"></canvas>
+          </div>
+          <script>
+              function criarGrafico() {
+                  const dados = {
+                      labels: ['Sim, definitivamente', 'Talvez, em certas situações', 'Não, não acredito'],
+                      datasets: [{
+                          backgroundColor: ['#C9DFB7', '#AED091', '#697560'],
+                          borderColor: ['black'],
+                          borderWidth: 1,
+                          data: [63.5, 34.9, 1.6],
+                      }]
+                  };
+  
+                  const config = {
+                      type: 'doughnut',
+                      data: dados,
+                      options: {
+                          plugins: {
+                              legend: {
+                                  position: 'bottom', // Posição da legenda
+                              }
+                          }
+                      }
+                  };
+  
+                  const ctx = document.getElementById('myChart4').getContext('2d');
+                  const myChart = new Chart(ctx, config);
+              }
+  
+              // Chamando a função para criar o gráfico
+              criarGrafico();
+  
+              // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+              window.addEventListener('resize', function () {
+                  criarGrafico();
+              });
+          </script>
+  
+          <p>
+              63,5% das pessoas que responderam o questionário afirmaram que “sim, definitivamente” a utilização de cascas
+              de alimentos podem contribuir para a redução do disperdício alimentar
+          </p>
+  
+          <h2> Você conhece os benefícios do consumo da casca de alguns alimentos? </h2>
+  
+          <div style="width: 100%; max-width: 600px; margin: auto;">
+              <canvas id="myChart5"></canvas>
+          </div>
+          <script>
+              function criarGrafico() {
+                  const dados = {
+                      labels: ['Não muito', 'Sim, de modo geral', 'Sim, tenho  vasto conhecimento', 'Não, nada'],
+                      datasets: [{
+                          backgroundColor: ['#C9DFB7', '#AED091', '#697560', '#DEF1CE'],
+                          borderColor: ['black'],
+                          borderWidth: 1,
+                          data: [54, 20.6, 12.7, 12.7],
+                      }]
+                  };
+  
+                  const config = {
+                      type: 'doughnut',
+                      data: dados,
+                      options: {
+                          plugins: {
+                              legend: {
+                                  position: 'bottom', // Posição da legenda
+                              }
+                          }
+                      }
+                  };
+  
+                  const ctx = document.getElementById('myChart5').getContext('2d');
+                  const myChart = new Chart(ctx, config);
+              }
+  
+              // Chamando a função para criar o gráfico
+              criarGrafico();
+  
+              // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+              window.addEventListener('resize', function () {
+                  criarGrafico();
+              });
+          </script>
+  
+          <p>
+              Mais da metade dos entrevistados afirmaram não ter muito conhecimento dos benefícios das cascas de
+              alimentos. 20% afirmaram conhecer de modo geral e o restante das opiniões foi dividida entre muito e nenhum
+              conhecimento
+          </p>
+  
+          <h2> Você já encontrou produtos fabricados a partir de cascas de alimentos? </h2>
+  
+          <div style="width: 100%; max-width: 600px; margin: auto;">
+              <canvas id="myChart6"></canvas>
+          </div>
+          <script>
+              function criarGrafico() {
+                  const dados = {
+                      labels: ['Não, nunca vi', 'Sim, produtos de beleza', 'Sim, utensílios domésticos', 'Sim, receitas', 'Sim, embalagens'],
+                      datasets: [{
+                          backgroundColor: ['#C9DFB7', '#AED091', '#697560', '#DEF1CE', '#778A35'],
+                          borderColor: ['black'],
+                          borderWidth: 1,
+                          data: [38.1, 23.8, 4.8, 54, 19],
+                      }]
+                  };
+  
+                  const config = {
+                      type: 'doughnut',
+                      data: dados,
+                      options: {
+                          plugins: {
+                              legend: {
+                                  position: 'bottom', // Posição da legenda
+                              }
+                          }
+                      }
+                  };
+  
+                  const ctx = document.getElementById('myChart6').getContext('2d');
+                  const myChart = new Chart(ctx, config);
+              }
+  
+              // Chamando a função para criar o gráfico
+              criarGrafico();
+  
+              // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+              window.addEventListener('resize', function () {
+                  criarGrafico();
+              });
+          </script>
+  
+          <p>
+              A maior parte dos entrevistados afirmou que já encontrou receitas a partir das cascas de alimentos, 38,1%
+              afirma nunca ter visto nenhum produto, 23,8 produtos de beleza, seguidos por 19% de embalagens e 4,8 de
+              utensílios domésticos.
+          </p>
+  
+          <h2> Qual é a sua maior preocupação ao utilizar cascas de alimentos de maneiras não convencionais? </h2>
+  
+          <div style="width: 100%; max-width: 600px; margin: auto;">
+              <canvas id="myChart7"></canvas>
+          </div>
+          <script>
+              function criarGrafico() {
+                  const dados = {
+                      labels: ['Higienização desadequada', 'Segurança alimentar', 'Sabor desagradável', 'Concentração de agrotóxicos', 'Nenhuma/ todas as anteriores'],
+                      datasets: [{
+                          backgroundColor: ['#C9DFB7', '#AED091', '#697560', '#DEF1CE', '#778A35'],
+                          borderColor: ['black'],
+                          borderWidth: 1,
+                          data: [31.7, 23.8, 28.6, 12.7, 3.2],
+                      }]
+                  };
+  
+                  const config = {
+                      type: 'doughnut',
+                      data: dados,
+                      options: {
+                          plugins: {
+                              legend: {
+                                  position: 'bottom', // Posição da legenda
+                              }
+                          }
+                      }
+                  };
+  
+                  const ctx = document.getElementById('myChart7').getContext('2d');
+                  const myChart = new Chart(ctx, config);
+              }
+  
+              // Chamando a função para criar o gráfico
+              criarGrafico();
+  
+              // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+              window.addEventListener('resize', function () {
+                  criarGrafico();
+              });
+          </script>
+  
+          <p>
+              Dentre as preocupações destacadas durante o consumo de cascas de alimentos, 31,7% ressaltam a higienização
+              inadequada, 28,5% o sabor desagradável, 23,8% a segurança alimentar, 12,7% a concentração deagrotóxicos e
+              3,2% não tem nenhuma.
+          </p>
+  
+          <h2> Você gostaria de receber mais informações sobre receitas ou técnicas envolvendo cascas de alimentos? </h2>
+  
+          <div style="width: 100%; max-width: 600px; margin: auto;">
+              <canvas id="myChart8"></canvas>
+          </div>
+          <script>
+              function criarGrafico() {
+                  const dados = {
+                      labels: ['Sim, adoraria!', 'Talvez, dependendo do tipo de informações', 'Não, não estou interessado'],
+                      datasets: [{
+                          backgroundColor: ['#C9DFB7', '#AED091', '#697560'],
+                          borderColor: ['black'],
+                          borderWidth: 1,
+                          data: [58.8, 34.9, 6.3],
+                      }]
+                  };
+  
+                  const config = {
+                      type: 'doughnut',
+                      data: dados,
+                      options: {
+                          plugins: {
+                              legend: {
+                                  position: 'bottom', // Posição da legenda
+                              }
+                          }
+                      }
+                  };
+  
+                  const ctx = document.getElementById('myChart8').getContext('2d');
+                  const myChart = new Chart(ctx, config);
+              }
+  
+              // Chamando a função para criar o gráfico
+              criarGrafico();
+  
+              // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+              window.addEventListener('resize', function () {
+                  criarGrafico();
+              });
+          </script>
+  
+          <p>
+              56,8% dos entrevistados confirmaram que gostariam de receber mais informações sobre receitas ou técnicas
+              envolvendo cascas de alimentos.
+          </p>
+  
+          <hr>
+  
+          <h1 class="ca"> ANÁLISE EM CONJUNTO DOS DADOS</h1>
+  
+          <div class="A1">
+  
+              <div style="width: 100%; max-width: 600px; margin: auto;">
+                  <canvas id="myChart9"></canvas>
+              </div>
+              <script>
+                  function criarGrafico() {
+                      const dados = {
+                          labels: ['Não, muito'],
+                          datasets: [{
+                              backgroundColor: ['#C9DFB7', '#AED091', '#697560'],
+                              borderColor: ['black'],
+                              borderWidth: 1,
+                              data: [61.9, 23.6, 14.5],
+                          }]
+                      };
+  
+                      const config = {
+                          type: 'doughnut',
+                          data: dados,
+                          options: {
+                              plugins: {
+                                  legend: {
+                                      position: 'bottom', // Posição da legenda
+                                  }
+                              }
+                          }
+                      };
+  
+                      const ctx = document.getElementById('myChart9').getContext('2d');
+                      const myChart = new Chart(ctx, config);
+                  }
+  
+                  // Chamando a função para criar o gráfico
+                  criarGrafico();
+  
+                  // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+                  window.addEventListener('resize', function () {
+                      criarGrafico();
+                  });
+              </script>
+  
+              <div id="primeiro">
+  
+                  <p>
+                      Em uma de nossas perguntas, cerca de 61.9% relataram não saber muito sobre os benefícios das cascas
+                      de alimentos.
+                  </p>
+              </div>
+  
+          </div>
+  
+          <div class="A1">
+  
+              <div id="primeiro">
+  
+                  <p>
+                      Enquanto em outro questionamento, 58.8% disseram ter interesse em saber mais sobre o tema. Sendo
+                      assim, notamos que a maior parte daqueles que não possuem conhecimento, desejam adquirir mais
+                      conhecimento.
+                  </p>
+              </div>
+  
+              <hr>
+  
+              <div style="width: 100%; max-width: 600px; margin: auto;">
+                  <canvas id="myChart10"></canvas>
+              </div>
+              <script>
+                  function criarGrafico() {
+                      const dados = {
+                          labels: ['Sim, adoraria!'],
+                          datasets: [{
+                              backgroundColor: ['#C9DFB7', '#AED091', '#697560'],
+                              borderColor: ['black'],
+                              borderWidth: 1,
+                              data: [58.8, 6.3, 34.9],
+                          }]
+                      };
+  
+                      const config = {
+                          type: 'doughnut',
+                          data: dados,
+                          options: {
+                              plugins: {
+                                  legend: {
+                                      position: 'bottom', // Posição da legenda
+                                  }
+                              }
+                          }
+                      };
+  
+                      const ctx = document.getElementById('myChart10').getContext('2d');
+                      const myChart = new Chart(ctx, config);
+                  }
+  
+                  // Chamando a função para criar o gráfico
+                  criarGrafico();
+  
+                  // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+                  window.addEventListener('resize', function () {
+                      criarGrafico();
+                  });
+              </script>
+          </div>
+  
+          <hr>
+  
+          <h2 class="ca"> Análise 2 </h2>
+  
+          <div class="A1">
+  
+              <div style="width: 100%; max-width: 600px; margin: auto;">
+                  <canvas id="myChart11"></canvas>
+              </div>
+              <script>
+                  function criarGrafico() {
+                      const dados = {
+                          labels: ['Sim, definitivamente'],
+                          datasets: [{
+                              backgroundColor: ['#C9DFB7', '#AED091', '#697560'],
+                              borderColor: ['black'],
+                              borderWidth: 1,
+                              data: [63.5, 34.9, 1.6],
+                          }]
+                      };
+  
+                      const config = {
+                          type: 'doughnut',
+                          data: dados,
+                          options: {
+                              plugins: {
+                                  legend: {
+                                      position: 'bottom', // Posição da legenda
+                                  }
+                              }
+                          }
+                      };
+  
+                      const ctx = document.getElementById('myChart11').getContext('2d');
+                      const myChart = new Chart(ctx, config);
+                  }
+  
+                  // Chamando a função para criar o gráfico
+                  criarGrafico();
+  
+                  // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+                  window.addEventListener('resize', function () {
+                      criarGrafico();
+                  });
+              </script>
+  
+              <div id="primeiro">
+  
+                  <p>
+                      63,5% do total dos entrevistados, relataram que “Sim, definitivamente” acreditam que o uso de casca
+                      de alimentos pode contribuir para a redução do disperdício alimentar.
+                  </p>
+              </div>
+  
+          </div>
+  
+          <div class="A1">
+  
+              <div id="primeiro">
+  
+                  <p>
+                      Porém, em contrabalanço, ao serem questionados se eles utilizavam as cascas de alimentos, 50,8%
+                      responderam que “não, nunca” utilizaram as cascas. Isso nos faz refletir a respeito da seguinte
+                      questão, se eles sabem que o consumo dessas cascas contribuem para a redução do disperdício
+                      alimentar, por que não a utilizam?
+                  </p>
+              </div>
+  
+              <div style="width: 100%; max-width: 600px; margin: auto;">
+                  <canvas id="myChart12"></canvas>
+              </div>
+              <script>
+                  function criarGrafico() {
+                      const dados = {
+                          labels: ['Não, nunca', 'Sim'],
+                          datasets: [{
+                              backgroundColor: ['#C9DFB7', '#AED091'],
+                              borderColor: ['black'],
+                              borderWidth: 1,
+                              data: [50.8, 49.2],
+                          }]
+                      };
+  
+                      const config = {
+                          type: 'doughnut',
+                          data: dados,
+                          options: {
+                              plugins: {
+                                  legend: {
+                                      position: 'bottom', // Posição da legenda
+                                  }
+                              }
+                          }
+                      };
+  
+                      const ctx = document.getElementById('myChart12').getContext('2d');
+                      const myChart = new Chart(ctx, config);
+                  }
+  
+                  // Chamando a função para criar o gráfico
+                  criarGrafico();
+  
+                  // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+                  window.addEventListener('resize', function () {
+                      criarGrafico();
+                  });
+              </script>
+          </div>
+  
+          <hr>
+  
+          <h2 class="ca"> Análise 3</h2>
+  
+          <div class="A1">
+  
+              <div style="width: 100%; max-width: 600px; margin: auto;">
+                  <canvas id="myChart13"></canvas>
+              </div>
+              <script>
+                  function criarGrafico() {
+                      const dados = {
+                          labels: ['Sim, receitas'],
+                          datasets: [{
+                              backgroundColor: ['#C9DFB7', '#AED091', '#697560', '#DEF1CE', '#778A35'],
+                              borderColor: ['black'],
+                              borderWidth: 1,
+                              data: [54, 38.1, 23.8, 4.8, 19],
+                          }]
+                      };
+  
+                      const config = {
+                          type: 'doughnut',
+                          data: dados,
+                          options: {
+                              plugins: {
+                                  legend: {
+                                      position: 'bottom', // Posição da legenda
+                                  }
+                              }
+                          }
+                      };
+  
+                      const ctx = document.getElementById('myChart13').getContext('2d');
+                      const myChart = new Chart(ctx, config);
+                  }
+  
+                  // Chamando a função para criar o gráfico
+                  criarGrafico();
+  
+                  // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+                  window.addEventListener('resize', function () {
+                      criarGrafico();
+                  });
+              </script>
+  
+              <div id="primeiro">
+  
+                  <p>
+                      54% dos entrevistados, relataram que encontram, na maior parte, receitas fabricadas a partir de
+                      cascas de alimentos.
+                  </p>
+              </div>
+  
+          </div>
+  
+          <div class="A1">
+  
+              <div id="primeiro">
+  
+                  <p>
+                      Enquanto em outra pergunta, a maioria disse ter maior preocupação com relação a higienização
+                      inadequada, com 31,7%. Sendo assim, isso nos mostra um dos principais motivos pelo qual as pessoas
+                      evitam usufruir das cascas de alimentos NÃO convencionais, sendo ela, a preocupação com a
+                      higienização.
+                  </p>
+              </div>
+  
+              <div style="width: 100%; max-width: 600px; margin: auto;">
+                  <canvas id="myChart14"></canvas>
+              </div>
+              <script>
+                  function criarGrafico() {
+                      const dados = {
+                          labels: ['Higienização desadequada'],
+                          datasets: [{
+                              backgroundColor: ['#C9DFB7', '#AED091', '#697560', '#DEF1CE', '#778A35'],
+                              borderColor: ['black'],
+                              borderWidth: 1,
+                              data: [31.7, 12.7, 3.2, 23.8, 28.6],
+                          }]
+                      };
+  
+                      const config = {
+                          type: 'doughnut',
+                          data: dados,
+                          options: {
+                              plugins: {
+                                  legend: {
+                                      position: 'bottom', // Posição da legenda
+                                  }
+                              }
+                          }
+                      };
+  
+                      const ctx = document.getElementById('myChart14').getContext('2d');
+                      const myChart = new Chart(ctx, config);
+                  }
+  
+                  // Chamando a função para criar o gráfico
+                  criarGrafico();
+  
+                  // Adicionando um evento para redimensionar o gráfico quando a janela é redimensionada
+                  window.addEventListener('resize', function () {
+                      criarGrafico();
+                  });
+              </script>
+          </div>
+  
+          <p>
+              <b>obs:</b> Isso nos mostra o “por que” muitas pessoas devem preferir utilizar alimentos fabricados de forma
+              convencional, por se sentirem mais “seguras” a higienização feita com produtos químicos.
+          </p>
+  
+          <p>
+              Ao realizar diversas pesquisas e através da intervenção feita pelo grupo, consideramos que obteve sucesso e
+              conseguimos avaliar o conhecimento das pessoas sobre o assunto, a faixa etária dos que responderam, entre
+              outros dados e assim, termos dados concretos, sabendo também, se há uma taxa de desperdício muito alta.
+          </p>
+  
+          <p>
+              Os alunos puderam compreender sobre o desperdício e as diversas formas de reutilizar as cascas e o quão
+              relevantes podem ser para o dia a dia, inovando e variando o cardápio, gerando novos conhecimentos.
+          </p>
+
+          
+  
+          <script src="seu_script.js"></script>
+  
+          <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+        new window.VLibras.Widget();
+        </script>
+
+<h2> REFERÊNCIAS UTILIZADAS </h2>
+
+<div class="referencias">
+
+    <div class="direita-pai">
+        <div id="direita">
+            <iframe src="http://www.pgextensaorural.univasf.edu.br/wp-content/uploads/2019/03/Cartilha-ISBN.pdf"
+                width="500" height="300"></iframe>
+        </div>
+        <div id="direita">
+            <iframe src="https://www.scielo.br/j/cr/a/MbK4GTbwHtDHFP3bkBK86kF/?format=pdf&lang=pt" width="500"
+                height="300"></iframe>
+        </div>
+        <div id="direita">
+            <iframe
+                src="https://spdm.org.br/noticias/saude-e-bem-estar/invista-nas-cascas-de-frutas-e-legumes/#:~:text=Frutas"
+                width="500" height="300"></iframe>
+        </div>
+        <div id="direita">
+            <iframe
+                src="https://g1.globo.com/economia/agronegocios/noticia/2021/03/13/evite-desperdicio-veja-como-aproveitar-o-resto-das-frutas.ghtml"
+                width="500" height="300"></iframe>
+        </div>
+    </div>
+
+    <div class="esquerda-pai">
+        <div id="esquerda">
+            <iframe src="https://dialnet.unirioja.es/servlet/articulo?codigo=6301523" width="500"
+                height="300"></iframe>
+        </div>
+        
+        <div id="esquerda">
+            <iframe
+                src="https://www.oseudinheirovalemais.com.br/15-receitas-com-cascas-e-talos-de-frutas-legumes-e-verduras/"
+                width="500" height="300"></iframe>
+        </div>
+        <div id="esquerda">
+            <iframe src="https://vivaassim.com.br/alimentacao/casca-de-banana-e-seus-beneficios-a-saude"
+                width="500" height="300"></iframe>
+        </div>
+        <div id="esquerda">
+            <iframe
+                src="https://fundacaocargill.org.br/cascas-talos-sementes/#:~:text=Cascas%2C%20talos%20e%20sementes%20podem"
+                width="500" height="300"></iframe>
+        </div>
+    </div>
+
+</div>
+
+
+
+  
+      </div>
 
         <footer>
             <div class="png-footer"><img src="./assets/footer2.png" class="footer"></div>

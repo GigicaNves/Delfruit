@@ -5,6 +5,7 @@ const $questionText = document.querySelector(".question")
 const $answersContainer = document.querySelector(".answers-quiz")
 const $answers = document.querySelectorAll(".answer")
 const $img = document.querySelector(".img-delfruit")
+const $correctAnswer = document.querySelector(".correct-answer")
 
 let currentQuestionIndex = 0
 let totalCorrect = 0
@@ -46,6 +47,7 @@ function resetState() {
 
   document.body.removeAttribute("class")
   $nextQuestionButton.classList.add("hide")
+  $correctAnswer.classList.add("hide")
 }
 
 function selectAnswer(event) {
@@ -69,7 +71,9 @@ function selectAnswer(event) {
       button.classList.add("incorrect")
     }
   })
-  
+
+  $correctAnswer.classList.remove("hide")
+  $correctAnswer.textContent = questions[currentQuestionIndex].response
   $nextQuestionButton.classList.remove("hide")
   currentQuestionIndex++
 }
@@ -118,21 +122,24 @@ const questions = [
       { text: "Sim, mas com moderação.", correct: true },
       { text: "Apenas se a fruta estiver madura.", correct: false },
       { text: "Sim, mas frequentemente.", correct: false }
-    ]
+    ],
+    response: "A casca e o bagaço da laranja são ricos em fibras alimentares e são altamente indicados para o consumo. Além disso, conta também com a presença de flavonoides e antioxidantes, uma combinação que ajuda a controlar o colesterol e a prevenir problemas relacionados à pressão.",
   },
   {
     question: "Consumir casca de uva é benéfico para a saúde cardiovascular. Essa afirmação é verdadeira ou falsa?",
     answers: [
       { text: "Verdadeira", correct: true },
       { text: "Falsa", correct: false },
-    ]
+    ],
+    response: " Há uma presença de minerais (como o cálcio, ferro e potássio) e uma significativa quantidade de fibras essenciais para o funcionamento adequado de nosso organismo, especialmente do sistema digestivo. As vitaminas encontradas nas uvas são: Vitamina E; Vitamina C; Vitamina K; Vitamina A.",
   },
   {
     question: "Descascar as frutas protege-as do agrotóxico. Essa afirmação é verdadeira ou falsa?",
     answers: [
       { text: "Falsa", correct: true},
       { text: "Verdadeira", correct: false },
-    ]
+    ],
+    response: "Como a maior parte dos resíduos de agrotóxicos está na casca, em tese, descascar a fruta ou vegetal faria com que boa parte dessas substâncias fossem eliminadas. No entanto, descascar os alimentos reduz também a ingestão de fibras insolúveis, por exemplo. Além disso, ao descascarmos, desperdiçamos muito do alimento, que poderia, em certos casos, ser aproveitado de forma integral.",
   },
   {
     question: "Qual é a casca que tem como principal benefício alivio de queimaduras?",
@@ -141,7 +148,8 @@ const questions = [
       { text: "A banana", correct: true },
       { text: "A uva", correct: false },
       { text: "A laranja", correct: false }
-    ]
+    ],
+    response: "Como cultura, no Brasil a casca da banana é conhecida como remédio na ação de cicatrização de feridas, por ser fortemente usada em queimaduras, por apresentar metabólicos como taninos.",
   },
   {
     question: "Qual fruta mais atua como um potente antioxidante?",
@@ -150,6 +158,8 @@ const questions = [
       { text: "Mamão", correct: false },
       { text: "Limão", correct: false },
       { text: "Laranja", correct: true }
-    ]
+    ],
+    response: "Isso porque possui os flavonoides, que atuam como antioxidantes e podem bloquear o surgimento de determinados genes, responsáveis por doenças degenerativas, incluindo o câncer. A vitamina C também atua removendo e interrompendo as reações dos radicais livres, auxiliando na prevenção de alguns tipos de câncer.",
   },
 ]
+
